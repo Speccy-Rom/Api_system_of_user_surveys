@@ -1,6 +1,6 @@
 # API system of user surveys
 Задача: спроектировать и разработать API для системы опросов пользователей
-разработка Spiridonov R.A aka Speccy
+##### _разработка Spiridonov R.A aka Speccy_
 
 ## Описание ТЗ:
 
