@@ -61,7 +61,7 @@ python manage.py runserver
 * Приложение будет доступно по адресу: http://127.0.0.1:8000/
 
 
-## Документация API
+### _Документация API_
 ### Чтобы получить токен пользователя: 
 * Request method: GET
 * URL: http://localhost:8000/api/login/
