@@ -23,3 +23,4 @@ urlpatterns = [
     path('answer/update/<int:answer_id>/', apiviews.answer_update, name='answer_update')
 
 ]
+
