@@ -34,7 +34,7 @@ class AnswerSerializer(serializers.ModelSerializer):
     def validate(self, attrs):
         question_type = Question.objects.get(id=attrs['question'].id).question_type
         try:
-            if question_type == "one" or question_type == "text":
+            if question_type in ["one", "text"]:
                 obj = Answer.objects.get(question=attrs['question'].id, survey=attrs['survey'],
                                          user_id=attrs['user_id'])
             elif question_type == "multiple":
@@ -83,7 +83,7 @@ class QuestionSerializer(serializers.Serializer):
 
     def validate(self, attrs):
         question_type = attrs['question_type']
-        if question_type == 'one' or question_type == 'multiple' or question_type == 'text':
+        if question_type in ['one', 'multiple', 'text']:
             return attrs
         raise serializers.ValidationError('Тип вопроса может быть только один, несколько или текстовый')
 
